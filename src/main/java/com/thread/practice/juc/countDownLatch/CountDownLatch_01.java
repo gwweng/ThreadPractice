@@ -21,6 +21,7 @@ public class CountDownLatch_01 {
                 for (int j = 0; j <= 1000; j++) {
                     result += j;
                 }
+                // 计数值减1
                 countDownLatch.countDown();
             });
         }
