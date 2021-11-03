@@ -11,7 +11,7 @@ import java.util.concurrent.locks.ReentrantLock;
  */
 public class ReentrantLock_04 {
     public static void main(String[] args) {
-        final Commoned common = new Commoned();
+        final Common common = new Common();
         new Thread(() -> {
             for (int i = 0; i < 50; i++) {
                 common.sub(i);
@@ -23,7 +23,7 @@ public class ReentrantLock_04 {
             }
         }).start();
         for (int i = 0; i < 50; i++) {
-            common.main(i);
+            common.sub3(i);
         }
     }
 }
